@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevigation Menu</title>
+    <style>
+        header {
+            background-color: red;
+            text-align: center;
+            margin: 0;
+            padding: 1px;
+        }
+
+        .menu-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #menu {
+            background-color: grey;
+        }
+
+        #menu>li {
+            display: inline-block;
+        }
+
+        #menu>li>a {
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        #menu>li>a:hover {
+            background-color: black;
+        }
+
+        #menu-item2,
+        #menu-item3 {
+            position: relative;
+        }
+
+        #sub-menu1,
+        #sub-menu2 {
+            position: absolute;
+            background-color: lightgrey;
+            top: 40px;
+            padding: 10px;
+            white-space: nowrap;
+            display: none;
+        }
+
+        #menu-item2:hover #sub-menu1 {
+            display: block;
+
+        }
+
+        #menu-item3:hover #sub-menu2 {
+            display: block;
+        }
+
+        #sub-menu1>li>a,
+        #sub-menu2>li>a {
+            color: darkorchid;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Demo of Dropdown</h1>
+    </header>
+    <nav>
+        <ul id="menu" class="menu-items">
+            <li>
+                <a href="dummy">Link 1</a>
+            </li>
+            <li id="menu-item2">
+                <a href="dummy">Link 2</a>
+                <ul id="sub-menu1" class="menu-items">
+                    <li>
+                        <a href="DD dummy">DD_Link_1</a>
+                    </li>
+                    <li>
+                        <a href="DD dummy">DD_Link_2</a>
+                    </li>
+                    <li>
+                        <a href="DD dummy">DD_Link_3</a>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu-item3">
+                <a href="dummy">Link 3</a>
+                <ul id="sub-menu2" class="menu-items">
+                    <li>
+                        <a href="DD dummy">DD_Link_1</a>
+                    </li>
+                    <li>
+                        <a href="DD dummy">DD_Link_2</a>
+                    </li>
+                    <li>
+                        <a href="DD dummy">DD_Link_3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
